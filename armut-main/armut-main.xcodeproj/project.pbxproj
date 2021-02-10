@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C42163F25D46CDC00591FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42163E25D46CDC00591FFF /* AppDelegate.swift */; };
 		0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42164025D46CDC00591FFF /* SceneDelegate.swift */; };
-		0C42164325D46CDC00591FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42164225D46CDC00591FFF /* ViewController.swift */; };
+		0C42164325D46CDC00591FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42164225D46CDC00591FFF /* MainViewController.swift */; };
 		0C42164625D46CDC00591FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C42164425D46CDC00591FFF /* Main.storyboard */; };
 		0C42164825D46CDF00591FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C42164725D46CDF00591FFF /* Assets.xcassets */; };
 		0C42164B25D46CDF00591FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C42164925D46CDF00591FFF /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		0C42163B25D46CDC00591FFF /* armut-main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "armut-main.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C42163E25D46CDC00591FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C42164025D46CDC00591FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0C42164225D46CDC00591FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C42164225D46CDC00591FFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0C42164525D46CDC00591FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C42164725D46CDF00591FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C42164A25D46CDF00591FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,63 @@
 		0C42163D25D46CDC00591FFF /* armut-main */ = {
 			isa = PBXGroup;
 			children = (
-				0C42163E25D46CDC00591FFF /* AppDelegate.swift */,
-				0C42164025D46CDC00591FFF /* SceneDelegate.swift */,
-				0C42164225D46CDC00591FFF /* ViewController.swift */,
-				0C42164425D46CDC00591FFF /* Main.storyboard */,
-				0C42164725D46CDF00591FFF /* Assets.xcassets */,
-				0C42164925D46CDF00591FFF /* LaunchScreen.storyboard */,
-				0C42164C25D46CDF00591FFF /* Info.plist */,
+				0C42165825D4734D00591FFF /* AppDelegate */,
+				0C42165725D4733A00591FFF /* Resources */,
+				0C42165625D4732D00591FFF /* ViewModels */,
+				0C42165525D4731200591FFF /* Models */,
+				0C42165425D4730B00591FFF /* Views */,
+				0C42165325D472FD00591FFF /* ViewControllers */,
 			);
 			path = "armut-main";
+			sourceTree = "<group>";
+		};
+		0C42165325D472FD00591FFF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C42164225D46CDC00591FFF /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0C42165425D4730B00591FFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C42164925D46CDF00591FFF /* LaunchScreen.storyboard */,
+				0C42164425D46CDC00591FFF /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C42165525D4731200591FFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0C42165625D4732D00591FFF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0C42165725D4733A00591FFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C42164725D46CDF00591FFF /* Assets.xcassets */,
+				0C42164C25D46CDF00591FFF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0C42165825D4734D00591FFF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0C42164025D46CDC00591FFF /* SceneDelegate.swift */,
+				0C42163E25D46CDC00591FFF /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C42164325D46CDC00591FFF /* ViewController.swift in Sources */,
+				0C42164325D46CDC00591FFF /* MainViewController.swift in Sources */,
 				0C42163F25D46CDC00591FFF /* AppDelegate.swift in Sources */,
 				0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */,
 			);
@@ -287,7 +335,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "armut-main/Info.plist";
+				INFOPLIST_FILE = "armut-main/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +353,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "armut-main/Info.plist";
+				INFOPLIST_FILE = "armut-main/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
