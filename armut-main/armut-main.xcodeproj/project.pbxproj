@@ -3,19 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3435AC25D536950027666C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3435AB25D536950027666C /* HomeModel.swift */; };
 		0C42163F25D46CDC00591FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42163E25D46CDC00591FFF /* AppDelegate.swift */; };
 		0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42164025D46CDC00591FFF /* SceneDelegate.swift */; };
 		0C42164325D46CDC00591FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42164225D46CDC00591FFF /* MainViewController.swift */; };
 		0C42164625D46CDC00591FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C42164425D46CDC00591FFF /* Main.storyboard */; };
 		0C42164825D46CDF00591FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C42164725D46CDF00591FFF /* Assets.xcassets */; };
 		0C42164B25D46CDF00591FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C42164925D46CDF00591FFF /* LaunchScreen.storyboard */; };
+		0CBAE06925D47737004B1037 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAE06825D47737004B1037 /* Cocktail.swift */; };
+		0CBAE06E25D477A0004B1037 /* OtherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAE06D25D477A0004B1037 /* OtherResponse.swift */; };
+		0CBAE07225D477C3004B1037 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAE07125D477C3004B1037 /* PostResponse.swift */; };
+		0CBAE07725D47871004B1037 /* APIManager.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAE07525D47871004B1037 /* APIManager.swift.swift */; };
+		0CBAE07825D47871004B1037 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAE07625D47871004B1037 /* NetworkingManager.swift */; };
+		5F29C305C70CE52A2E355E4E /* Pods_armut_main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C3435AB25D536950027666C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0C42163B25D46CDC00591FFF /* armut-main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "armut-main.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C42163E25D46CDC00591FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C42164025D46CDC00591FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,14 @@
 		0C42164725D46CDF00591FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C42164A25D46CDF00591FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C42164C25D46CDF00591FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CBAE06825D47737004B1037 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		0CBAE06D25D477A0004B1037 /* OtherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherResponse.swift; sourceTree = "<group>"; };
+		0CBAE07125D477C3004B1037 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		0CBAE07525D47871004B1037 /* APIManager.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift.swift; sourceTree = "<group>"; };
+		0CBAE07625D47871004B1037 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		2091C7123062A83CAB12C9AA /* Pods-armut-main.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.release.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.release.xcconfig"; sourceTree = "<group>"; };
+		C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_armut_main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E039565080DBBC724BFCE78B /* Pods-armut-main.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.debug.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F29C305C70CE52A2E355E4E /* Pods_armut_main.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,8 @@
 			children = (
 				0C42163D25D46CDC00591FFF /* armut-main */,
 				0C42163C25D46CDC00591FFF /* Products */,
+				FC91BB53D013F2003B95F11E /* Pods */,
+				7BB8D3A311C67AD76521063B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +105,8 @@
 		0C42165525D4731200591FFF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0CBAE06625D47677004B1037 /* ResponseObject */,
+				0CBAE06525D47654004B1037 /* Service */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +136,59 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		0CBAE06525D47654004B1037 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0CBAE07425D477F9004B1037 /* HomeService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0CBAE06625D47677004B1037 /* ResponseObject */ = {
+			isa = PBXGroup;
+			children = (
+				0CBAE06B25D47744004B1037 /* Home */,
+			);
+			path = ResponseObject;
+			sourceTree = "<group>";
+		};
+		0CBAE06B25D47744004B1037 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0CBAE06825D47737004B1037 /* Cocktail.swift */,
+				0CBAE06D25D477A0004B1037 /* OtherResponse.swift */,
+				0CBAE07125D477C3004B1037 /* PostResponse.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0CBAE07425D477F9004B1037 /* HomeService */ = {
+			isa = PBXGroup;
+			children = (
+				0C3435AB25D536950027666C /* HomeModel.swift */,
+				0CBAE07525D47871004B1037 /* APIManager.swift.swift */,
+				0CBAE07625D47871004B1037 /* NetworkingManager.swift */,
+			);
+			path = HomeService;
+			sourceTree = "<group>";
+		};
+		7BB8D3A311C67AD76521063B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC91BB53D013F2003B95F11E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E039565080DBBC724BFCE78B /* Pods-armut-main.debug.xcconfig */,
+				2091C7123062A83CAB12C9AA /* Pods-armut-main.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C42164F25D46CDF00591FFF /* Build configuration list for PBXNativeTarget "armut-main" */;
 			buildPhases = (
+				6F1EE4ADCE7204EBE486EE90 /* [CP] Check Pods Manifest.lock */,
 				0C42163725D46CDC00591FFF /* Sources */,
 				0C42163825D46CDC00591FFF /* Frameworks */,
 				0C42163925D46CDC00591FFF /* Resources */,
+				B03CC748EF85A8E6C7F56FE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,13 +256,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F1EE4ADCE7204EBE486EE90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-armut-main-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B03CC748EF85A8E6C7F56FE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-armut-main/Pods-armut-main-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-armut-main/Pods-armut-main-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-armut-main/Pods-armut-main-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0C42163725D46CDC00591FFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBAE07725D47871004B1037 /* APIManager.swift.swift in Sources */,
 				0C42164325D46CDC00591FFF /* MainViewController.swift in Sources */,
 				0C42163F25D46CDC00591FFF /* AppDelegate.swift in Sources */,
+				0CBAE06925D47737004B1037 /* Cocktail.swift in Sources */,
+				0CBAE06E25D477A0004B1037 /* OtherResponse.swift in Sources */,
+				0CBAE07825D47871004B1037 /* NetworkingManager.swift in Sources */,
+				0C3435AC25D536950027666C /* HomeModel.swift in Sources */,
+				0CBAE07225D477C3004B1037 /* PostResponse.swift in Sources */,
 				0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +455,7 @@
 		};
 		0C42165025D46CDF00591FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E039565080DBBC724BFCE78B /* Pods-armut-main.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -349,6 +474,7 @@
 		};
 		0C42165125D46CDF00591FFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2091C7123062A83CAB12C9AA /* Pods-armut-main.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
