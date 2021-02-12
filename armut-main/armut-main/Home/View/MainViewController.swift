@@ -13,12 +13,10 @@ import RxSwift
 class MainViewController: UIViewController {
     
     @IBOutlet weak var ServicesVCView: UIView!
-    var mainviewmodel = MainViewModel()
 
     override func viewDidLoad() {
     super.viewDidLoad()
         
-    mainviewmodel.requestServicesData() //veriler çekilir.
 
 
         // Do any additional setup after loading the view.

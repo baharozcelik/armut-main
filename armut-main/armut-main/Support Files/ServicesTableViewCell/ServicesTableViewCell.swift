@@ -5,4 +5,7 @@
 //  Created by Bahar on 12.02.2021.
 //
 
-import Foundation
+import UIKit
+
+class ServicesTableViewCell: UICollectionViewCell {
+}
