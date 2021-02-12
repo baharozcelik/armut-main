@@ -1,6 +1,6 @@
 //
 //  APIManager.swift
-//  Sample Cocktails App
+//  Sample Armut App
 //
 //  Created by Dalia on 09/02/2020.
 //  Copyright © 2020 Dalia Danila. All rights reserved.
@@ -13,7 +13,7 @@ struct Constants {
     
     static let baseUrl = "https://my-json-server.typicode.com/engincancan/case"
     
-    static let cocktailsURL = "/home"
+    static let servicesURL = "/service"
 
 }
 

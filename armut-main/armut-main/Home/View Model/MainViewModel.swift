@@ -1,35 +1,42 @@
+//
+//  HomeModel.swift
+//  Sample Armut App
+//
+//  Created by BAhar on 12/02/2021.
+//  Copyright © 2020 Bahar. All rights reserved.
+//
 
 import Foundation
 import RxSwift
 import RxCocoa
 
-class HomeModel {
+class MainViewModel {
     
     public enum HomeError {
         case internetError(String)
         case serverMessage(String)
     }
     
-    public let cocktails : PublishSubject<[Cocktail]> = PublishSubject()
+    public let services : PublishSubject<[Services]> = PublishSubject()
     public let loading: PublishSubject<Bool> = PublishSubject()
     public let error : PublishSubject<HomeError> = PublishSubject()
     
     private let disposable = DisposeBag()
     
     
-    public func requestCocktailData(){
+    public func requestServicesData(){
         
      //   self.loading.onNext(true)
-        APIManager.requestData(url: Constants.cocktailsURL, method: .get, parameters: nil, completion: { (result) in
+        APIManager.requestData(url: Constants.servicesURL, method: .get, parameters: nil, completion: { (result) in
          //   self.loading.onNext(false)
             switch result {
             case .success(let returnJson) :
-                let cocktails = returnJson.arrayValue.compactMap {
+                let services = returnJson.arrayValue.compactMap {
                     
-                    return Cocktail(data: try! $0.rawData())
+                    return Services(data: try! $0.rawData())
                     
                 }
-                self.cocktails.onNext(cocktails)
+                self.services.onNext(services)
             case .failure(let failure) :
                 switch failure {
                 case .connectionError:

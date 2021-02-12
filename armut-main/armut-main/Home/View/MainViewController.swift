@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+
 
 class MainViewController: UIViewController {
-    var homeModel = HomeModel()
+    
+    @IBOutlet weak var ServicesVCView: UIView!
+    var mainviewmodel = MainViewModel()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        homeModel.requestCocktailData()
+    super.viewDidLoad()
+        
+    mainviewmodel.requestServicesData() //veriler çekilir.
 
 
         // Do any additional setup after loading the view.
