@@ -1,8 +1,8 @@
 //
 //  Details.swift
-//  armut-test
+//  armut-main
 //
-//  Created by Amer Atia on 12.02.2021.
+//  Created by Bahar on 12.02.2021.
 //
 
 import Foundation

@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
+
 
 
 class MainViewController: UIViewController {

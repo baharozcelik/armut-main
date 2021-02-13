@@ -150,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				0C42165425D4730B00591FFF /* View */,
-				0CF9ACBE25D69B8500CFEEE0 /* View Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -161,13 +160,6 @@
 				0C4627DA25D71DAA00C1DABD /* Response */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		0CF9ACBE25D69B8500CFEEE0 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		0CF9ACBF25D69BAB00CFEEE0 /* Helper */ = {

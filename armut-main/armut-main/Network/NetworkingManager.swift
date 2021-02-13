@@ -1,6 +1,6 @@
 //
 //  NetworkingManager.swift
-//  armut-test
+//  armut-main
 //
 //  Created by Bahar on 12.02.2021.
 //

@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+
 
 class ServicesCollectionViewVC: UIViewController {
     override func viewDidLoad() {
