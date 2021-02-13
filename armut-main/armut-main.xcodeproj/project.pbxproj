@@ -79,6 +79,7 @@
 		0C42163D25D46CDC00591FFF /* armut-main */ = {
 			isa = PBXGroup;
 			children = (
+				0CDC6AEA25D8761700397A1F /* ViewModel */,
 				0CDC6AB525D7E2CE00397A1F /* Controller */,
 				0C42165425D4730B00591FFF /* View */,
 				0C4627D225D71D4100C1DABD /* Network */,
@@ -174,6 +175,13 @@
 				0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */,
 			);
 			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		0CDC6AEA25D8761700397A1F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0CF9ACBC25D69B4F00CFEEE0 /* Home */ = {

@@ -27,7 +27,7 @@ class MainDomainModel: MainDomainModelProtocol {
             
             self.delegate?.getHomeListOnSuccess(home: home)
         }, onError: {
-            
+            self.delegate?.getHomeListOnError()
         })
     }
 }
