@@ -24,7 +24,7 @@ struct ArmutDetailURL {
 
 class NetworkingManager{
     
-    public static func getHomeList(completion : @escaping ((_ home : Home?) -> Void) ){
+    public static func getHomeList(onSuccess : @escaping ((_ home : Home?) -> Void) , onError: @escaping (() -> Void)){
         var urlComponents = URLComponents()
         
         urlComponents.scheme = ArmutHomeURL.scheme
@@ -37,11 +37,15 @@ class NetworkingManager{
         AF.request("\(url)",method: .get)
             .validate()
             .responseDecodable(of: Home.self) { response in
-                completion(response.value)
+                if response.value != nil {
+                    onSuccess(response.value) // onSuccess icine value gonderdik.
+                } else {
+                    onError() // error ver.
+                }
             }
     }
     
-    public static func getServiceDetails(id: String, completion : @escaping ((_ home : Details?) -> Void) ){
+    public static func getServiceDetails(id: String, onSuccess : @escaping ((_ home : Details?) -> Void) , onError: @escaping (() -> Void)){
         var urlComponents = URLComponents()
         
         urlComponents.scheme = ArmutDetailURL.scheme
@@ -55,8 +59,11 @@ class NetworkingManager{
         AF.request("\(url)",method: .get)
             .validate()
             .responseDecodable(of: Details.self) { response in
-                completion(response.value)
+                if response.value != nil {
+                    onSuccess(response.value)
+                } else {
+                    onError()
+                }
             }
     }
-    
 }

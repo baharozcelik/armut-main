@@ -18,9 +18,6 @@
 		0C4627E425D71DCA00C1DABD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E125D71DCA00C1DABD /* Service.swift */; };
 		0C4627E525D71DCA00C1DABD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E225D71DCA00C1DABD /* Post.swift */; };
 		0C4627E625D71DCA00C1DABD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E325D71DCA00C1DABD /* Home.swift */; };
-		0CF9ACD025D69C5800CFEEE0 /* ServicesCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9ACCF25D69C5800CFEEE0 /* ServicesCollectionViewVC.swift */; };
-		0CF9ACDA25D69CED00CFEEE0 /* ServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9ACD925D69CED00CFEEE0 /* ServicesTableViewCell.swift */; };
-		0CF9ACED25D6FD0000CFEEE0 /* ServicesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF9ACEC25D6FD0000CFEEE0 /* ServicesTableViewCell.xib */; };
 		5F29C305C70CE52A2E355E4E /* Pods_armut_main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +35,6 @@
 		0C4627E125D71DCA00C1DABD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		0C4627E225D71DCA00C1DABD /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0C4627E325D71DCA00C1DABD /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		0CF9ACCF25D69C5800CFEEE0 /* ServicesCollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewVC.swift; sourceTree = "<group>"; };
-		0CF9ACD925D69CED00CFEEE0 /* ServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableViewCell.swift; sourceTree = "<group>"; };
-		0CF9ACEC25D6FD0000CFEEE0 /* ServicesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesTableViewCell.xib; sourceTree = "<group>"; };
 		2091C7123062A83CAB12C9AA /* Pods-armut-main.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.release.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.release.xcconfig"; sourceTree = "<group>"; };
 		C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_armut_main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E039565080DBBC724BFCE78B /* Pods-armut-main.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.debug.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,9 +76,7 @@
 				0C4627D225D71D4100C1DABD /* Network */,
 				0CF9ACBC25D69B4F00CFEEE0 /* Home */,
 				0CF9ACBD25D69B7A00CFEEE0 /* Model */,
-				0CF9ACBF25D69BAB00CFEEE0 /* Helper */,
 				0C42165725D4733A00591FFF /* Resources */,
-				0CF9ACC025D69BC400CFEEE0 /* Support Files */,
 				0C42163E25D46CDC00591FFF /* AppDelegate.swift */,
 				0C42164025D46CDC00591FFF /* SceneDelegate.swift */,
 			);
@@ -96,7 +88,6 @@
 			children = (
 				0C42164425D46CDC00591FFF /* Main.storyboard */,
 				0C42164225D46CDC00591FFF /* MainViewController.swift */,
-				0CF9ACCF25D69C5800CFEEE0 /* ServicesCollectionViewVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,30 +151,6 @@
 				0C4627DA25D71DAA00C1DABD /* Response */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		0CF9ACBF25D69BAB00CFEEE0 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		0CF9ACC025D69BC400CFEEE0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0CF9ACD825D69CD100CFEEE0 /* ServicesTableViewCell */,
-			);
-			path = "Support Files";
-			sourceTree = "<group>";
-		};
-		0CF9ACD825D69CD100CFEEE0 /* ServicesTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				0CF9ACD925D69CED00CFEEE0 /* ServicesTableViewCell.swift */,
-				0CF9ACEC25D6FD0000CFEEE0 /* ServicesTableViewCell.xib */,
-			);
-			path = ServicesTableViewCell;
 			sourceTree = "<group>";
 		};
 		7BB8D3A311C67AD76521063B /* Frameworks */ = {
@@ -262,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CF9ACED25D6FD0000CFEEE0 /* ServicesTableViewCell.xib in Resources */,
 				0C42164B25D46CDF00591FFF /* LaunchScreen.storyboard in Resources */,
 				0C42164825D46CDF00591FFF /* Assets.xcassets in Resources */,
 				0C42164625D46CDC00591FFF /* Main.storyboard in Resources */,
@@ -322,11 +288,9 @@
 				0C4627E425D71DCA00C1DABD /* Service.swift in Sources */,
 				0C4627E625D71DCA00C1DABD /* Home.swift in Sources */,
 				0C42163F25D46CDC00591FFF /* AppDelegate.swift in Sources */,
-				0CF9ACD025D69C5800CFEEE0 /* ServicesCollectionViewVC.swift in Sources */,
 				0C4627D425D71D4D00C1DABD /* NetworkingManager.swift in Sources */,
 				0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */,
 				0C4627E525D71DCA00C1DABD /* Post.swift in Sources */,
-				0CF9ACDA25D69CED00CFEEE0 /* ServicesTableViewCell.swift in Sources */,
 				0C4627DF25D71DC200C1DABD /* Details.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
