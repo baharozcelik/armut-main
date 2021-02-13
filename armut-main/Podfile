@@ -10,6 +10,7 @@ target 'armut-main' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'SwiftyJSON'
+    pod 'SDWebImage'
 
 
 

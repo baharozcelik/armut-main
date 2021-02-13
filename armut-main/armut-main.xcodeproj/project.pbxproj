@@ -18,6 +18,9 @@
 		0C4627E425D71DCA00C1DABD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E125D71DCA00C1DABD /* Service.swift */; };
 		0C4627E525D71DCA00C1DABD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E225D71DCA00C1DABD /* Post.swift */; };
 		0C4627E625D71DCA00C1DABD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E325D71DCA00C1DABD /* Home.swift */; };
+		0CDC6ABE25D7E40A00397A1F /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC6ABD25D7E40A00397A1F /* ServiceCollectionViewCell.swift */; };
+		0CDC6ADC25D7FEF000397A1F /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDC6ADB25D7FEF000397A1F /* ServiceCollectionViewCell.xib */; };
+		0CDC6AE825D835FD00397A1F /* MainDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */; };
 		5F29C305C70CE52A2E355E4E /* Pods_armut_main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		0C4627E125D71DCA00C1DABD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		0C4627E225D71DCA00C1DABD /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0C4627E325D71DCA00C1DABD /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0CDC6ABD25D7E40A00397A1F /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		0CDC6ADB25D7FEF000397A1F /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDomainModel.swift; sourceTree = "<group>"; };
 		2091C7123062A83CAB12C9AA /* Pods-armut-main.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.release.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.release.xcconfig"; sourceTree = "<group>"; };
 		C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_armut_main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E039565080DBBC724BFCE78B /* Pods-armut-main.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.debug.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,8 +79,9 @@
 		0C42163D25D46CDC00591FFF /* armut-main */ = {
 			isa = PBXGroup;
 			children = (
+				0CDC6AB525D7E2CE00397A1F /* Controller */,
+				0C42165425D4730B00591FFF /* View */,
 				0C4627D225D71D4100C1DABD /* Network */,
-				0CF9ACBC25D69B4F00CFEEE0 /* Home */,
 				0CF9ACBD25D69B7A00CFEEE0 /* Model */,
 				0C42165725D4733A00591FFF /* Resources */,
 				0C42163E25D46CDC00591FFF /* AppDelegate.swift */,
@@ -87,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				0C42164425D46CDC00591FFF /* Main.storyboard */,
-				0C42164225D46CDC00591FFF /* MainViewController.swift */,
+				0CF9ACBC25D69B4F00CFEEE0 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,10 +144,43 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		0CDC6AB525D7E2CE00397A1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C42164225D46CDC00591FFF /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CDC6AB725D7E2FA00397A1F /* ServiceCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0CDC6ABD25D7E40A00397A1F /* ServiceCollectionViewCell.swift */,
+				0CDC6ADB25D7FEF000397A1F /* ServiceCollectionViewCell.xib */,
+			);
+			path = ServiceCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		0CDC6AB925D7E39700397A1F /* PostCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		0CDC6AE625D8358500397A1F /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
 		0CF9ACBC25D69B4F00CFEEE0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0C42165425D4730B00591FFF /* View */,
+				0CDC6AB725D7E2FA00397A1F /* ServiceCollectionViewCell */,
+				0CDC6AB925D7E39700397A1F /* PostCollectionViewCell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,6 +188,7 @@
 		0CF9ACBD25D69B7A00CFEEE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0CDC6AE625D8358500397A1F /* DomainModel */,
 				0C4627DA25D71DAA00C1DABD /* Response */,
 			);
 			path = Model;
@@ -231,6 +272,7 @@
 			files = (
 				0C42164B25D46CDF00591FFF /* LaunchScreen.storyboard in Resources */,
 				0C42164825D46CDF00591FFF /* Assets.xcassets in Resources */,
+				0CDC6ADC25D7FEF000397A1F /* ServiceCollectionViewCell.xib in Resources */,
 				0C42164625D46CDC00591FFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +330,9 @@
 				0C4627E425D71DCA00C1DABD /* Service.swift in Sources */,
 				0C4627E625D71DCA00C1DABD /* Home.swift in Sources */,
 				0C42163F25D46CDC00591FFF /* AppDelegate.swift in Sources */,
+				0CDC6ABE25D7E40A00397A1F /* ServiceCollectionViewCell.swift in Sources */,
 				0C4627D425D71D4D00C1DABD /* NetworkingManager.swift in Sources */,
+				0CDC6AE825D835FD00397A1F /* MainDomainModel.swift in Sources */,
 				0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */,
 				0C4627E525D71DCA00C1DABD /* Post.swift in Sources */,
 				0C4627DF25D71DC200C1DABD /* Details.swift in Sources */,
