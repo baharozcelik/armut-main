@@ -7,12 +7,15 @@
 
 import UIKit
 
+
+
 class MainViewController: UIViewController {
-    var homeModel = HomeModel()
+    
+    @IBOutlet weak var ServicesVCView: UIView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        homeModel.requestCocktailData()
+    super.viewDidLoad()
+        
 
 
         // Do any additional setup after loading the view.
