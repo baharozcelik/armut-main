@@ -20,50 +20,94 @@ class MainViewController: UIViewController {
     @IBOutlet weak var postLabel: UILabel!
     @IBOutlet weak var postCollectionView: UICollectionView!
 
-    var trending: [Service] = []
+    private var viewModel: MainViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkingManager.getHomeList(onSuccess: { home in
-            guard let trending = home?.trending else { return}
-            self.trending = trending
-            self.commonInit()
-        }, onError: {
-            
-        })
-
+        commonInit()
     }
     
     func commonInit() {
+        viewModel = MainViewModel(delegate: self)
+        
+        let serviceNib = UINib(nibName: "ServiceCollectionViewCell", bundle: nil)
+        
+        // let postNib = UINib(nibName: " POST NIB NAME", bundle: nil)
+        
         serviceCollectionView.delegate = self
         serviceCollectionView.dataSource = self
-        let nib = UINib(nibName: "ServiceCollectionViewCell", bundle: nil)
-        serviceCollectionView.register(nib, forCellWithReuseIdentifier: "ServiceCollectionViewCell")
+        serviceCollectionView.register(serviceNib, forCellWithReuseIdentifier: "ServiceCollectionViewCell")
+        
+        otherCollectionView.delegate = self
+        otherCollectionView.dataSource = self
+        otherCollectionView.register(serviceNib, forCellWithReuseIdentifier: "ServiceCollectionViewCell")
     }
 }
 
 extension MainViewController: UICollectionViewDataSource , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return trending.count
+        guard let otherList = viewModel?.getOtherlist(),
+              let serviceList = viewModel?.getTrending(),
+              let postList = viewModel?.getPosts() else { return 0 }
+        
+        switch collectionView {
+        case serviceCollectionView:
+            return serviceList.count
+        case otherCollectionView:
+            return otherList.count
+        case postCollectionView:
+            return postList.count
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let item = trending[indexPath.row]
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceCollectionViewCell", for: indexPath) as? ServiceCollectionViewCell,
-              let url = item.imageURL,
-              let title = item.name,
-              let proText = item.proCount else { return UICollectionViewCell()}
+        guard let otherList = viewModel?.getOtherlist(),
+              let serviceList = viewModel?.getTrending(),
+              let postList = viewModel?.getPosts() else { return UICollectionViewCell() }
         
         
-        
-        cell.setupCell(imageURL: url, title: title, proText: "\(proText)")
-        
-        return cell
-        
+        switch collectionView {
+        case serviceCollectionView:
+            let item = serviceList[indexPath.row]
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceCollectionViewCell", for: indexPath) as? ServiceCollectionViewCell,
+                  let url = item.imageURL,
+                  let title = item.name,
+                  let proText = item.proCount else { return UICollectionViewCell()}
+            
+            
+            
+            cell.setupCell(imageURL: url, title: title, proText: "\(proText)")
+            
+            return cell
+        case otherCollectionView:
+            let item = otherList[indexPath.row]
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceCollectionViewCell", for: indexPath) as? ServiceCollectionViewCell,
+                  let url = item.imageURL,
+                  let title = item.name,
+                  let proText = item.proCount else { return UICollectionViewCell()}
+            
+            cell.setupCell(imageURL: url, title: title, proText: "\(proText)")
+            return cell
+        case postCollectionView:
+            return UICollectionViewCell()
+        default:
+            return UICollectionViewCell()
+        }
+    }
+}
+
+extension MainViewController: MainViewModelDelegate {
+    func getHomeOnSuccess() {
+        serviceCollectionView.reloadData()
+        otherCollectionView.reloadData()
+        postCollectionView.reloadData()
     }
     
     
 }
+
 

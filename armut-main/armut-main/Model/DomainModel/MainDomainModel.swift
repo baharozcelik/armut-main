@@ -20,6 +20,10 @@ class MainDomainModel: MainDomainModelProtocol {
     
     weak var delegate: MainDomainModelDelegate?
     
+    init(delegate: MainDomainModelDelegate?){
+        self.delegate = delegate
+    }
+    
     func getHomeList(){
         NetworkingManager.getHomeList(onSuccess: { [weak self] home in
             guard let self = self,
