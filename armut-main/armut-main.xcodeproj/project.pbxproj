@@ -22,6 +22,8 @@
 		0CDC6ADC25D7FEF000397A1F /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDC6ADB25D7FEF000397A1F /* ServiceCollectionViewCell.xib */; };
 		0CDC6AE825D835FD00397A1F /* MainDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */; };
 		0CDC6AED25D91D0000397A1F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC6AEC25D91D0000397A1F /* MainViewModel.swift */; };
+		0CDC6AF025D91F9D00397A1F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC6AEF25D91F9D00397A1F /* PostCollectionViewCell.swift */; };
+		0CDC6AF325D91FBC00397A1F /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDC6AF225D91FBC00397A1F /* PostCollectionViewCell.xib */; };
 		5F29C305C70CE52A2E355E4E /* Pods_armut_main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		0CDC6ADB25D7FEF000397A1F /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
 		0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDomainModel.swift; sourceTree = "<group>"; };
 		0CDC6AEC25D91D0000397A1F /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0CDC6AEF25D91F9D00397A1F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		0CDC6AF225D91FBC00397A1F /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		2091C7123062A83CAB12C9AA /* Pods-armut-main.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.release.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.release.xcconfig"; sourceTree = "<group>"; };
 		C13C6967E1FBD361718A60C9 /* Pods_armut_main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_armut_main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E039565080DBBC724BFCE78B /* Pods-armut-main.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-armut-main.debug.xcconfig"; path = "Target Support Files/Pods-armut-main/Pods-armut-main.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		0CDC6AB925D7E39700397A1F /* PostCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				0CDC6AEF25D91F9D00397A1F /* PostCollectionViewCell.swift */,
+				0CDC6AF225D91FBC00397A1F /* PostCollectionViewCell.xib */,
 			);
 			path = PostCollectionViewCell;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				0C42164825D46CDF00591FFF /* Assets.xcassets in Resources */,
 				0CDC6ADC25D7FEF000397A1F /* ServiceCollectionViewCell.xib in Resources */,
 				0C42164625D46CDC00591FFF /* Main.storyboard in Resources */,
+				0CDC6AF325D91FBC00397A1F /* PostCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +352,7 @@
 				0C4627D425D71D4D00C1DABD /* NetworkingManager.swift in Sources */,
 				0CDC6AE825D835FD00397A1F /* MainDomainModel.swift in Sources */,
 				0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */,
+				0CDC6AF025D91F9D00397A1F /* PostCollectionViewCell.swift in Sources */,
 				0C4627E525D71DCA00C1DABD /* Post.swift in Sources */,
 				0C4627DF25D71DC200C1DABD /* Details.swift in Sources */,
 				0CDC6AED25D91D0000397A1F /* MainViewModel.swift in Sources */,

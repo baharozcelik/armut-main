@@ -32,6 +32,8 @@ class MainViewController: UIViewController {
         
         let serviceNib = UINib(nibName: "ServiceCollectionViewCell", bundle: nil)
         
+        let postNib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
+        
         // let postNib = UINib(nibName: " POST NIB NAME", bundle: nil)
         
         serviceCollectionView.delegate = self
@@ -41,6 +43,11 @@ class MainViewController: UIViewController {
         otherCollectionView.delegate = self
         otherCollectionView.dataSource = self
         otherCollectionView.register(serviceNib, forCellWithReuseIdentifier: "ServiceCollectionViewCell")
+        
+        postCollectionView.delegate = self
+        postCollectionView.dataSource = self
+        postCollectionView.register(postNib, forCellWithReuseIdentifier: "PostCollectionViewCell")
+        
     }
 }
 
@@ -69,6 +76,7 @@ extension MainViewController: UICollectionViewDataSource , UICollectionViewDeleg
         
         
         switch collectionView {
+        
         case serviceCollectionView:
             let item = serviceList[indexPath.row]
             
@@ -76,12 +84,12 @@ extension MainViewController: UICollectionViewDataSource , UICollectionViewDeleg
                   let url = item.imageURL,
                   let title = item.name,
                   let proText = item.proCount else { return UICollectionViewCell()}
-            
-            
-            
             cell.setupCell(imageURL: url, title: title, proText: "\(proText)")
             
             return cell
+            
+            
+            
         case otherCollectionView:
             let item = otherList[indexPath.row]
             
@@ -92,6 +100,23 @@ extension MainViewController: UICollectionViewDataSource , UICollectionViewDeleg
             
             cell.setupCell(imageURL: url, title: title, proText: "\(proText)")
             return cell
+            
+            
+        case postCollectionView:
+            let item = postList[indexPath.row]
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell,
+                  let url = item.imageURL,
+                  let title = item.title,
+                  let categoryText = item.category else { return UICollectionViewCell()}
+            
+            cell.setupCell(imageURL: url, title: title, categoryText: categoryText)
+            return cell
+            
+            
+            
+            
+            
         case postCollectionView:
             return UICollectionViewCell()
         default:
