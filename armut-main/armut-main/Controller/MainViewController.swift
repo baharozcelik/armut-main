@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SafariServices
 
 
 class MainViewController: UIViewController {
@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         commonInit()
     }
     
-    func commonInit() {
+    private func commonInit() {
         viewModel = MainViewModel(delegate: self)
         
         let serviceNib = UINib(nibName: "ServiceCollectionViewCell", bundle: nil)
@@ -48,6 +48,13 @@ class MainViewController: UIViewController {
         postCollectionView.dataSource = self
         postCollectionView.register(postNib, forCellWithReuseIdentifier: "PostCollectionViewCell")
         
+    }
+    
+    private func openSafariPage(urlString: String?){
+        guard let urlString = urlString,
+              let url = URL(string: urlString) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
 }
 
@@ -112,15 +119,28 @@ extension MainViewController: UICollectionViewDataSource , UICollectionViewDeleg
             
             cell.setupCell(imageURL: url, title: title, categoryText: categoryText)
             return cell
-            
-            
-            
-            
-            
         case postCollectionView:
             return UICollectionViewCell()
         default:
             return UICollectionViewCell()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let otherList = viewModel?.getOtherlist(),
+              let serviceList = viewModel?.getTrending(),
+              let postList = viewModel?.getPosts() else { return }
+        
+        switch collectionView {
+        case serviceCollectionView:
+            return
+        case otherCollectionView:
+            return
+        case postCollectionView:
+            let item = postList[indexPath.row]
+            openSafariPage(urlString: item.link)
+        default:
+            return
         }
     }
 }
