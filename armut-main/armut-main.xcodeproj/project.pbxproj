@@ -18,6 +18,9 @@
 		0C4627E425D71DCA00C1DABD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E125D71DCA00C1DABD /* Service.swift */; };
 		0C4627E525D71DCA00C1DABD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E225D71DCA00C1DABD /* Post.swift */; };
 		0C4627E625D71DCA00C1DABD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4627E325D71DCA00C1DABD /* Home.swift */; };
+		0CCABC1225D9716D00AFC7CA /* ServiceDetailMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCABC1125D9716D00AFC7CA /* ServiceDetailMainModel.swift */; };
+		0CCABC1525D9719200AFC7CA /* ServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCABC1425D9719200AFC7CA /* ServiceDetailViewModel.swift */; };
+		0CCABC1825D9719F00AFC7CA /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCABC1725D9719F00AFC7CA /* ServiceDetailViewController.swift */; };
 		0CDC6ABE25D7E40A00397A1F /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC6ABD25D7E40A00397A1F /* ServiceCollectionViewCell.swift */; };
 		0CDC6ADC25D7FEF000397A1F /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDC6ADB25D7FEF000397A1F /* ServiceCollectionViewCell.xib */; };
 		0CDC6AE825D835FD00397A1F /* MainDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */; };
@@ -41,6 +44,9 @@
 		0C4627E125D71DCA00C1DABD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		0C4627E225D71DCA00C1DABD /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0C4627E325D71DCA00C1DABD /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0CCABC1125D9716D00AFC7CA /* ServiceDetailMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailMainModel.swift; sourceTree = "<group>"; };
+		0CCABC1425D9719200AFC7CA /* ServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewModel.swift; sourceTree = "<group>"; };
+		0CCABC1725D9719F00AFC7CA /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
 		0CDC6ABD25D7E40A00397A1F /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		0CDC6ADB25D7FEF000397A1F /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
 		0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDomainModel.swift; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0C42164225D46CDC00591FFF /* MainViewController.swift */,
+				0CCABC1725D9719F00AFC7CA /* ServiceDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0CDC6AE725D835FD00397A1F /* MainDomainModel.swift */,
+				0CCABC1125D9716D00AFC7CA /* ServiceDetailMainModel.swift */,
 			);
 			path = DomainModel;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				0CDC6AEC25D91D0000397A1F /* MainViewModel.swift */,
+				0CCABC1425D9719200AFC7CA /* ServiceDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -346,12 +355,15 @@
 			files = (
 				0C42164325D46CDC00591FFF /* MainViewController.swift in Sources */,
 				0C4627E425D71DCA00C1DABD /* Service.swift in Sources */,
+				0CCABC1825D9719F00AFC7CA /* ServiceDetailViewController.swift in Sources */,
 				0C4627E625D71DCA00C1DABD /* Home.swift in Sources */,
 				0C42163F25D46CDC00591FFF /* AppDelegate.swift in Sources */,
+				0CCABC1225D9716D00AFC7CA /* ServiceDetailMainModel.swift in Sources */,
 				0CDC6ABE25D7E40A00397A1F /* ServiceCollectionViewCell.swift in Sources */,
 				0C4627D425D71D4D00C1DABD /* NetworkingManager.swift in Sources */,
 				0CDC6AE825D835FD00397A1F /* MainDomainModel.swift in Sources */,
 				0C42164125D46CDC00591FFF /* SceneDelegate.swift in Sources */,
+				0CCABC1525D9719200AFC7CA /* ServiceDetailViewModel.swift in Sources */,
 				0CDC6AF025D91F9D00397A1F /* PostCollectionViewCell.swift in Sources */,
 				0C4627E525D71DCA00C1DABD /* Post.swift in Sources */,
 				0C4627DF25D71DC200C1DABD /* Details.swift in Sources */,

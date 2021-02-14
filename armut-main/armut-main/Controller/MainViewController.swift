@@ -56,6 +56,16 @@ class MainViewController: UIViewController {
         let safariViewController = SFSafariViewController(url: url)
         self.present(safariViewController, animated: true, completion: nil)
     }
+    
+    private func openDetailsScreen(serviceId: String?){
+        guard let serviceId = serviceId else { return }
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        
+        let detailsViewController = storyBoard.instantiateViewController(withIdentifier: "ServiceDetailViewController") 
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
+        
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource , UICollectionViewDelegate {
@@ -135,7 +145,7 @@ extension MainViewController: UICollectionViewDataSource , UICollectionViewDeleg
         case serviceCollectionView:
             return
         case otherCollectionView:
-            return
+            openDetailsScreen(serviceId: "200")
         case postCollectionView:
             let item = postList[indexPath.row]
             openSafariPage(urlString: item.link)
