@@ -16,11 +16,31 @@ class ServiceDetailViewController: UIViewController {
     @IBOutlet weak var serviceDetailAvarageLabel: UILabel!
     @IBOutlet weak var serviceDetailCompletedJobsLabel: UILabel!
     
+    @IBOutlet weak var instructionView1: UIView!
+    @IBOutlet weak var instructionView2: UIView!
+    @IBOutlet weak var instructionView3: UIView!
+    
     
     var viewModel: ServiceDetailViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    private func setupUI(){
+        instructionView1.layer.cornerRadius = 30
+        instructionView1.layer.borderWidth = 1
+        instructionView1.layer.borderColor = UIColor.gray.cgColor
+        
+        instructionView2.layer.cornerRadius = 30
+        instructionView2.layer.borderWidth = 1
+        instructionView2.layer.borderColor = UIColor.gray.cgColor
+        
+        instructionView3.layer.cornerRadius = 30
+        instructionView3.layer.borderWidth = 1
+        instructionView3.layer.borderColor = UIColor.gray.cgColor
+        
     }
     
     private func initViews(){

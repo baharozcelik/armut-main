@@ -7,9 +7,6 @@ target 'armut-main' do
 
   # Pods for armut-main
     pod 'Alamofire', '~> 5.2'
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'SwiftyJSON'
     pod 'SDWebImage'
 
 
