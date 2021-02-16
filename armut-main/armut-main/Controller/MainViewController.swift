@@ -161,6 +161,21 @@ extension MainViewController: UICollectionViewDataSource , UICollectionViewDeleg
 }
 
 extension MainViewController: MainViewModelDelegate {
+    func getHomeListOnError() {
+        // Create new Alert
+        var errorMessage = UIAlertController(title: "Error", message: "Unkown error. Can you try this again?", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            self.viewModel?.getHomeList()
+         })
+        //Add OK button to a dialog message
+        errorMessage.addAction(ok)
+        // Present Alert to
+        self.present(errorMessage, animated: true, completion: nil)
+        
+    }
+    
     func getHomeOnSuccess() {
         serviceCollectionView.reloadData()
         otherCollectionView.reloadData()

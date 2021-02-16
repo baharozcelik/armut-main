@@ -9,6 +9,8 @@ import Foundation
 
 protocol ServiceDetailViewModelDelegate: class {
     func onDetailsOnSuccess()
+    func getDetailsOnError()
+    
 }
 
 protocol ServiceDetailViewModelProtocol {
@@ -71,6 +73,6 @@ extension ServiceDetailViewModel: ServiceDetailMainModeDelegate {
     }
     
     func getDetailsOnError() {
-        return
+        self.delegate?.getDetailsOnError()
     }
 }

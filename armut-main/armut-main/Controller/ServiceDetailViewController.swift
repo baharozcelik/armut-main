@@ -67,6 +67,19 @@ class ServiceDetailViewController: UIViewController {
 
 
 extension ServiceDetailViewController: ServiceDetailViewModelDelegate {
+    func getDetailsOnError() {
+        var errorMessage = UIAlertController(title: "Error", message: "Unkown error. Can you try this again?", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            self.navigationController?.popViewController(animated: true)
+         })
+        //Add OK button to a dialog message
+        errorMessage.addAction(ok)
+        // Present Alert to
+        self.present(errorMessage, animated: true, completion: nil)
+    }
+    
     func onDetailsOnSuccess() {
         initViews()
     }

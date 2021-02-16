@@ -9,12 +9,15 @@ import Foundation
 
 protocol MainViewModelDelegate: class {
     func getHomeOnSuccess()
+    func getHomeListOnError()
 }
+
 
 protocol MainViewModelProtocol {
     func getOtherlist() -> [Service]
     func getTrending() -> [Service]
     func getPosts() -> [Post]
+    func getHomeList()
 }
 
 class MainViewModel: MainViewModelProtocol {
@@ -45,6 +48,10 @@ class MainViewModel: MainViewModelProtocol {
         guard let postsList = homeList?.posts else { return [] }
         return postsList
     }
+    
+    func getHomeList() {
+        mainModel?.getHomeList()
+    }
 }
 
 extension MainViewModel: MainDomainModelDelegate {
@@ -54,6 +61,8 @@ extension MainViewModel: MainDomainModelDelegate {
     }
     
     func getHomeListOnError() {
-        //Todo: handle errros
+        delegate?.getHomeListOnError()
+
     }
 }
+
