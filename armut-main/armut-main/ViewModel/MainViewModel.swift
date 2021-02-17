@@ -24,7 +24,7 @@ class MainViewModel: MainViewModelProtocol {
     
     private var mainModel: MainDomainModel?
     
-    weak var delegate: MainViewModelDelegate?
+    weak var delegate: MainViewModelDelegate? // daha sonra kullanmak üzere delegate kaydını tutmak
     
     private var homeList: Home?
     
